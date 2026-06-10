@@ -29,10 +29,16 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Trattoria A Casa Mia" },
-      { name: "description", content: "Trattoria italiana a Rivoli (TO). Cucina tradizionale, atmosfera familiare." },
-      { property: "og:title", content: "Trattoria A Casa Mia" },
-      { property: "og:description", content: "Cucina italiana e atmosfera familiare nel cuore di Rivoli." },
+      { title: "Trattoria Piemontese" },
+      {
+        name: "description",
+        content: "Sito demo per una trattoria italiana elegante e contemporanea.",
+      },
+      { property: "og:title", content: "Trattoria Piemontese" },
+      {
+        property: "og:description",
+        content: "Cucina italiana, ingredienti stagionali e ospitalità autentica.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -50,7 +56,7 @@ export const Route = createRootRoute({
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="it">
       <head>
         <HeadContent />
       </head>

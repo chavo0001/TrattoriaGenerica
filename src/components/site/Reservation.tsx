@@ -4,16 +4,17 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Calendar, Users, Clock, CheckCircle2 } from "lucide-react";
-import bg from "@/assets/real-interior-2.jpg";
+import bg from "@/assets/demo-tortelli.jpg";
 
 export function Reservation() {
   const [submitted, setSubmitted] = useState(false);
-  const labelClass = "text-xs font-medium uppercase tracking-[0.18em] text-sand/85";
+  const labelClass =
+    "text-[8px] font-medium uppercase tracking-[0.1em] text-sand/85 md:text-xs md:tracking-[0.18em]";
   const fieldClass =
-    "mt-2 h-12 rounded-md border border-cream/15 bg-cream/[0.06] px-4 text-cream placeholder:text-cream/35 focus-visible:border-sand focus-visible:ring-1 focus-visible:ring-sand/30";
+    "mt-1 h-9 rounded-md border border-cream/15 bg-cream/[0.06] px-2 text-xs text-cream placeholder:text-cream/35 focus-visible:border-sand focus-visible:ring-1 focus-visible:ring-sand/30 md:mt-2 md:h-12 md:px-4 md:text-sm";
 
   return (
-    <section id="prenota" className="relative overflow-hidden bg-espresso py-24 lg:py-36">
+    <section id="prenota" className="relative overflow-hidden bg-espresso py-10 md:py-24 lg:py-36">
       <img
         src={bg}
         alt=""
@@ -31,17 +32,17 @@ export function Reservation() {
             Prenotazioni
             <span className="rule ml-3" />
           </span>
-          <h2 className="mt-6 font-display text-4xl leading-[1.05] text-cream md:text-5xl lg:text-6xl">
+          <h2 className="mt-2 font-display text-3xl leading-[1.02] text-cream md:mt-6 md:text-5xl lg:text-6xl">
             Prenota il tuo
             <span className="block italic font-light text-sand">tavolo.</span>
           </h2>
-          <p className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-cream/65 md:text-base">
+          <p className="mx-auto mt-2 max-w-xl text-[10px] leading-relaxed text-cream/65 md:mt-6 md:text-base">
             Lasciaci i tuoi dati: ti richiamiamo per confermare disponibilita e orario.
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 items-stretch overflow-hidden rounded-lg border border-cream/12 bg-ink/45 shadow-2xl shadow-black/25 backdrop-blur-sm lg:grid-cols-12">
-          <div className="p-6 md:p-10 lg:col-span-8 lg:p-12">
+        <div className="mt-4 grid grid-cols-1 items-stretch overflow-hidden rounded-lg border border-cream/12 bg-ink/45 shadow-2xl shadow-black/25 backdrop-blur-sm md:mt-14 lg:grid-cols-12">
+          <div className="p-3 md:p-10 lg:col-span-8 lg:p-12">
             {submitted ? (
               <div className="flex min-h-[26rem] flex-col items-center justify-center py-12 text-center">
                 <CheckCircle2 className="mx-auto h-12 w-12 text-sand" />
@@ -59,18 +60,16 @@ export function Reservation() {
                   e.preventDefault();
                   setSubmitted(true);
                 }}
-                className="grid grid-cols-1 gap-5 md:grid-cols-2"
+                className="grid grid-cols-2 gap-2 md:gap-5"
               >
-                <div className="mb-2 border-b border-cream/10 pb-5 md:col-span-2">
+                <div className="mb-2 hidden border-b border-cream/10 pb-5 md:col-span-2 md:block">
                   <span className="text-[10px] uppercase tracking-[0.3em] text-sand/75">
                     Richiesta tavolo
                   </span>
-                  <h3 className="mt-3 font-display text-3xl text-cream">
-                    Dettagli prenotazione
-                  </h3>
+                  <h3 className="mt-3 font-display text-3xl text-cream">Dettagli prenotazione</h3>
                 </div>
 
-                <div className="md:col-span-2">
+                <div className="col-span-2">
                   <Label htmlFor="nome" className={labelClass}>
                     Nome e cognome
                   </Label>
@@ -81,7 +80,13 @@ export function Reservation() {
                   <Label htmlFor="tel" className={labelClass}>
                     Telefono
                   </Label>
-                  <Input id="tel" type="tel" required placeholder="+39 ..." className={fieldClass} />
+                  <Input
+                    id="tel"
+                    type="tel"
+                    required
+                    placeholder="+39 ..."
+                    className={fieldClass}
+                  />
                 </div>
 
                 <div>
@@ -111,7 +116,7 @@ export function Reservation() {
                   <Input id="ora" type="time" required className={fieldClass} />
                 </div>
 
-                <div className="md:col-span-2">
+                <div>
                   <Label htmlFor="persone" className={`${labelClass} flex items-center gap-1.5`}>
                     <Users className="h-3.5 w-3.5" /> Numero di persone
                   </Label>
@@ -126,24 +131,29 @@ export function Reservation() {
                   />
                 </div>
 
-                <div className="md:col-span-2">
+                <div>
                   <Label htmlFor="note" className={labelClass}>
                     Note o richieste particolari
                   </Label>
                   <Textarea
                     id="note"
-                    rows={4}
+                    rows={1}
                     placeholder="Allergie, intolleranze, occasioni speciali..."
-                    className="mt-2 rounded-md border border-cream/15 bg-cream/[0.06] px-4 py-3 text-cream placeholder:text-cream/35 focus-visible:border-sand focus-visible:ring-1 focus-visible:ring-sand/30"
+                    className="mt-1 min-h-9 resize-none rounded-md border border-cream/15 bg-cream/[0.06] px-2 py-2 text-xs text-cream placeholder:text-cream/35 focus-visible:border-sand focus-visible:ring-1 focus-visible:ring-sand/30 md:mt-2 md:min-h-24 md:px-4 md:py-3 md:text-sm"
                   />
                 </div>
 
-                <p className="text-xs italic leading-relaxed text-cream/50 md:col-span-2">
+                <p className="hidden text-xs italic leading-relaxed text-cream/50 md:col-span-2 md:block">
                   La prenotazione verra confermata dal ristorante in base alla disponibilita.
                 </p>
 
-                <div className="pt-2 md:col-span-2">
-                  <Button type="submit" variant="cream" size="xl" className="w-full rounded-md md:w-auto">
+                <div className="col-span-2 pt-1 md:pt-2">
+                  <Button
+                    type="submit"
+                    variant="cream"
+                    size="lg"
+                    className="h-10 w-full rounded-md text-xs md:h-14 md:w-auto md:px-8 md:text-sm"
+                  >
                     Richiedi prenotazione
                   </Button>
                 </div>
@@ -151,7 +161,7 @@ export function Reservation() {
             )}
           </div>
 
-          <aside className="relative overflow-hidden border-t border-cream/10 bg-wine/65 p-8 text-cream md:p-10 lg:col-span-4 lg:border-l lg:border-t-0">
+          <aside className="relative hidden overflow-hidden border-t border-cream/10 bg-wine/65 p-8 text-cream md:p-10 lg:col-span-4 lg:block lg:border-l lg:border-t-0">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,224,177,0.18),transparent_36%)]" />
             <div className="relative flex h-full flex-col">
               <span className="text-[10px] uppercase tracking-[0.3em] text-sand">
@@ -161,19 +171,19 @@ export function Reservation() {
                 Una voce fa prima.
               </h3>
               <p className="mt-5 text-sm leading-relaxed text-cream/78">
-                Per gruppi numerosi, allergie o richieste particolari, una telefonata e il modo
-                piu rapido.
+                Per gruppi numerosi, allergie o richieste particolari, una telefonata e il modo piu
+                rapido.
               </p>
               <div className="mt-8 border-y border-cream/15 py-7">
                 <span className="text-[10px] uppercase tracking-[0.28em] text-cream/50">
                   Telefono
                 </span>
-                <a href="tel:0119561186" className="mt-3 block font-display text-4xl text-sand">
-                  011 956 1186
+                <a href="tel:+390110000000" className="mt-3 block font-display text-4xl text-sand">
+                  011 000 0000
                 </a>
               </div>
               <Button asChild variant="cream" size="lg" className="mt-8 w-full rounded-md">
-                <a href="tel:0119561186">
+                <a href="tel:+390110000000">
                   <Phone className="h-4 w-4" /> Chiama ora
                 </a>
               </Button>

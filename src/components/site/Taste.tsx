@@ -1,78 +1,75 @@
-import antipasti from "@/assets/antipasti-casa-mia.jpg";
-import tartare from "@/assets/tartarine.png";
-import carneVerdure from "@/assets/carne-verdure-casa-mia.jpg";
-import fiorentina from "@/assets/fiorentina-casa-mia.jpg";
+import antipasti from "@/assets/demo-tortelli.jpg";
+import tartare from "@/assets/demo-tartare.jpg";
+import carneVerdure from "@/assets/demo-carne.jpg";
+import fiorentina from "@/assets/demo-pasta-ragu.jpg";
 
 export function Taste() {
   return (
-    <section className="relative bg-ink py-24 lg:py-36 overflow-hidden">
+    <section className="relative overflow-hidden bg-ink py-12 md:py-24 lg:py-36">
       <div className="mx-auto max-w-7xl px-5 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+        <div className="grid grid-cols-12 items-start gap-4 md:gap-10 lg:gap-16">
           {/* Text column */}
-          <div className="lg:col-span-4 lg:sticky lg:top-32">
-            <span className="eyebrow"><span className="rule" />Cucina</span>
-            <h2 className="mt-6 font-display text-4xl md:text-5xl lg:text-6xl text-cream leading-[1.05]">
-              Il piacere della carne,
-              <span className="block italic text-sand font-light">il calore della trattoria.</span>
+          <div className="col-span-4 lg:sticky lg:top-32 lg:col-span-4">
+            <span className="eyebrow">
+              <span className="rule" />
+              Cucina
+            </span>
+            <h2 className="mt-3 font-display text-2xl leading-[0.98] text-cream sm:text-3xl md:mt-6 md:text-5xl lg:text-6xl">
+              Sapori riconoscibili,
+              <span className="block italic text-sand font-light">serviti con carattere.</span>
             </h2>
-            <p className="mt-8 text-base text-cream/70 leading-relaxed max-w-md">
-              Da <span className="italic">A Casa Mia</span> la cucina e fatta di
-              sapori riconoscibili, materie prime scelte e una forte attenzione alla
-              carne: tagli selezionati, frollature curate e piatti pensati per essere
-              gustati con calma.
+            <p className="mt-3 max-w-md text-[9px] leading-relaxed text-cream/70 sm:text-xs md:mt-8 md:text-base">
+              Da <span className="italic">Trattoria Piemontese</span> la cucina è fatta di materie
+              prime scelte, pasta fresca, sughi lenti e secondi preparati con attenzione. Piatti
+              generosi, presentati con misura.
             </p>
-            <p className="mt-5 text-base text-cream/70 leading-relaxed max-w-md">
-              Il tutto accompagnato da una proposta di vini capace di rendere ogni
-              tavolo piu completo, senza perdere l&apos;atmosfera semplice e accogliente
-              di una vera trattoria.
+            <p className="mt-2 hidden max-w-md text-xs leading-relaxed text-cream/70 sm:block md:mt-5 md:text-base">
+              Una selezione di vini italiani completa il percorso, mantenendo l&apos;atmosfera
+              informale, elegante e accogliente di una trattoria contemporanea.
             </p>
           </div>
 
           {/* Asymmetric photo composition */}
-          <div className="lg:col-span-8 relative">
-            <div className="grid grid-cols-12 gap-5 lg:gap-8">
+          <div className="relative col-span-8 lg:col-span-8">
+            <div className="grid grid-cols-12 gap-2.5 sm:gap-4 lg:gap-8">
               <figure className="col-span-8 lg:col-span-7">
                 <img
                   src={fiorentina}
-                  alt="Fiorentina alla griglia"
+                  alt="Pasta fresca al ragù"
                   className="w-full aspect-[4/5] object-cover"
                   loading="lazy"
                 />
-                <figcaption className="mt-3 text-[10px] tracking-[0.3em] uppercase text-cream/50">
-                </figcaption>
+                <figcaption className="mt-3 text-[10px] tracking-[0.3em] uppercase text-cream/50"></figcaption>
               </figure>
 
-              <figure className="col-span-4 lg:col-span-5 mt-12 lg:mt-28">
+              <figure className="col-span-4 mt-6 lg:col-span-5 lg:mt-28">
                 <img
                   src={tartare}
-                  alt="Tartare di carne in quattro varianti"
+                  alt="Tartare con pistacchi"
                   className="w-full aspect-[3/4] object-cover"
                   loading="lazy"
                 />
-                <figcaption className="mt-3 text-[10px] tracking-[0.3em] uppercase text-cream/50">
-                </figcaption>
+                <figcaption className="mt-3 text-[10px] tracking-[0.3em] uppercase text-cream/50"></figcaption>
               </figure>
 
-              <figure className="col-span-7 lg:col-span-6 lg:col-start-2 mt-2 lg:mt-4">
+              <figure className="col-span-7 mt-0 lg:col-span-6 lg:col-start-2 lg:mt-4">
                 <img
                   src={antipasti}
-                  alt="Antipasto misto con carpaccio e vitello"
+                  alt="Tortelli con salsa alle erbe"
                   className="w-full aspect-[5/4] object-cover"
                   loading="lazy"
                 />
-                <figcaption className="mt-3 text-[10px] tracking-[0.3em] uppercase text-cream/50">
-                </figcaption>
+                <figcaption className="mt-3 text-[10px] tracking-[0.3em] uppercase text-cream/50"></figcaption>
               </figure>
 
-              <figure className="col-span-5 lg:col-span-4 mt-10 lg:mt-16">
+              <figure className="col-span-5 mt-4 overflow-hidden lg:col-span-4 lg:mt-16">
                 <img
                   src={carneVerdure}
-                  alt="Carne e verdure"
-                  className="w-full aspect-[3/4] object-cover"
+                  alt="Secondo di carne con verdure"
+                  className="w-full aspect-[3/4] origin-left scale-[1.18] object-cover object-left"
                   loading="lazy"
                 />
-                <figcaption className="mt-3 text-[10px] tracking-[0.3em] uppercase text-cream/50">
-                </figcaption>
+                <figcaption className="mt-3 text-[10px] tracking-[0.3em] uppercase text-cream/50"></figcaption>
               </figure>
             </div>
           </div>

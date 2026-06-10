@@ -14,17 +14,17 @@ import { MobileBar } from "@/components/site/MobileBar";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Trattoria A Casa Mia · Cucina italiana a Rivoli (TO)" },
+      { title: "Trattoria Piemontese · Cucina italiana a Torino" },
       {
         name: "description",
         content:
-          "Trattoria A Casa Mia a Rivoli, Torino. Cucina italiana e piemontese, atmosfera familiare. Prenota un tavolo o chiama 011 956 1186.",
+          "Sito demo per una trattoria italiana elegante e contemporanea. Menu stagionale, prenotazioni e contatti di esempio.",
       },
-      { property: "og:title", content: "Trattoria A Casa Mia · Rivoli (TO)" },
+      { property: "og:title", content: "Trattoria Piemontese · Torino" },
       {
         property: "og:description",
         content:
-          "Cucina italiana, atmosfera familiare e il piacere di sentirsi davvero a casa. Corso Francia 28, Rivoli.",
+          "Cucina italiana, ingredienti stagionali e un'accoglienza autentica. Sito dimostrativo.",
       },
       { property: "og:type", content: "restaurant" },
     ],
