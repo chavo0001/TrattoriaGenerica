@@ -5,73 +5,51 @@ import fiorentina from "@/assets/demo-pasta-ragu.jpg";
 
 export function Taste() {
   return (
-    <section className="relative overflow-hidden bg-ink py-12 md:py-24 lg:py-36">
-      <div className="mx-auto max-w-7xl px-5 lg:px-12">
-        <div className="grid grid-cols-12 items-start gap-7 lg:gap-16">
-          {/* Text column */}
-          <div className="col-span-12 lg:sticky lg:top-32 lg:col-span-4">
+    <section id="cucina" className="grain relative overflow-hidden bg-ink py-16 md:py-28 lg:py-36">
+      <div className="mx-auto max-w-7xl px-6 lg:px-12">
+        <div className="taste-editorial">
+          <div className="taste-copy">
             <span className="eyebrow">
               <span className="rule" />
               Cucina
             </span>
-            <h2 className="mt-3 max-w-sm font-display text-3xl leading-[1.02] text-cream md:mt-6 md:text-5xl lg:text-6xl">
+            <h2 className="mt-5 max-w-xl font-display text-[2.15rem] leading-[1.02] text-cream md:text-5xl lg:text-6xl">
               Sapori riconoscibili,
-              <span className="block italic text-sand font-light">serviti con carattere.</span>
+              <span className="block font-light italic text-sand">serviti con carattere.</span>
             </h2>
-            <p className="mt-3 max-w-xl text-xs leading-relaxed text-cream/70 md:mt-8 md:text-base">
+            <p className="mt-5 max-w-md text-sm leading-7 text-cream/70 md:mt-7 md:text-base md:leading-8">
               Da <span className="italic">Trattoria Piemontese</span> la cucina è fatta di materie
               prime scelte, pasta fresca, sughi lenti e secondi preparati con attenzione. Piatti
               generosi, presentati con misura.
             </p>
-            <p className="mt-2 hidden max-w-md text-xs leading-relaxed text-cream/70 sm:block md:mt-5 md:text-base">
-              Una selezione di vini italiani completa il percorso, mantenendo l&apos;atmosfera
-              informale, elegante e accogliente di una trattoria contemporanea.
-            </p>
           </div>
 
-          {/* Asymmetric photo composition */}
-          <div className="relative col-span-12 lg:col-span-8">
-            <div className="grid grid-cols-12 gap-3 sm:gap-4 lg:gap-8">
-              <figure className="col-span-6 lg:col-span-7">
-                <img
-                  src={fiorentina}
-                  alt="Pasta fresca al ragù"
-                  className="aspect-square w-full object-cover lg:aspect-[4/5]"
-                  loading="lazy"
-                />
-                <figcaption className="mt-3 text-[10px] tracking-[0.3em] uppercase text-cream/50"></figcaption>
-              </figure>
+          <div className="taste-collage" aria-label="Selezione di piatti della cucina">
+            <span className="taste-brush" aria-hidden="true" />
 
-              <figure className="col-span-6 lg:col-span-5 lg:mt-28">
-                <img
-                  src={tartare}
-                  alt="Tartare con pistacchi"
-                  className="aspect-square w-full object-cover lg:aspect-[3/4]"
-                  loading="lazy"
-                />
-                <figcaption className="mt-3 text-[10px] tracking-[0.3em] uppercase text-cream/50"></figcaption>
-              </figure>
+            <figure className="taste-photo taste-photo-main">
+              <img src={fiorentina} alt="Pasta fresca al ragù" loading="lazy" />
+            </figure>
 
-              <figure className="col-span-6 lg:col-span-6 lg:col-start-2 lg:mt-4">
-                <img
-                  src={antipasti}
-                  alt="Tortelli con salsa alle erbe"
-                  className="aspect-square w-full object-cover lg:aspect-[5/4]"
-                  loading="lazy"
-                />
-                <figcaption className="mt-3 text-[10px] tracking-[0.3em] uppercase text-cream/50"></figcaption>
-              </figure>
+            <figure className="taste-photo taste-photo-left">
+              <img src={tartare} alt="Tartare con pistacchi" loading="lazy" />
+            </figure>
 
-              <figure className="col-span-6 overflow-hidden lg:col-span-4 lg:mt-16">
-                <img
-                  src={carneVerdure}
-                  alt="Secondo di carne con verdure"
-                  className="aspect-square w-full origin-left scale-[1.18] object-cover object-left lg:aspect-[3/4]"
-                  loading="lazy"
-                />
-                <figcaption className="mt-3 text-[10px] tracking-[0.3em] uppercase text-cream/50"></figcaption>
-              </figure>
-            </div>
+            <figure className="taste-photo taste-photo-right">
+              <img src={antipasti} alt="Tortelli con salsa alle erbe" loading="lazy" />
+            </figure>
+
+            <figure className="taste-photo taste-photo-bottom">
+              <img src={carneVerdure} alt="Secondo di carne con verdure" loading="lazy" />
+            </figure>
+
+            <p className="taste-note">
+              Cucina
+              <br />
+              di tradizione,
+              <br />
+              scelta con cura.
+            </p>
           </div>
         </div>
       </div>
