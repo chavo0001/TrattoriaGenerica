@@ -14,8 +14,8 @@ export function MenuSection() {
       <div className="mx-auto max-w-7xl px-5 lg:px-12">
         <div className="grid grid-cols-12 items-center gap-4 md:gap-10 lg:gap-16">
           <div className="col-span-5 lg:col-span-5">
-            <span className="eyebrow">
-              <span className="rule" />
+            <span className="text-[10px] font-medium uppercase leading-relaxed tracking-[0.18em] text-sand sm:text-xs md:eyebrow">
+              <span className="rule hidden md:inline-block" />
               La nostra cucina
             </span>
             <h2 className="mt-3 font-display text-3xl leading-[1.02] text-cream md:mt-6 md:text-5xl lg:text-6xl">
@@ -31,17 +31,17 @@ export function MenuSection() {
           </div>
 
           <div className="col-span-7 pr-3 sm:pr-6 lg:col-span-7 lg:pr-10">
-            <figure className="relative rounded-lg bg-espresso shadow-2xl shadow-black/25">
+            <figure className="relative bg-espresso shadow-2xl shadow-black/25 md:rounded-lg">
               <img
                 src={team}
                 alt="Piatto con gnocchi colorati"
-                className="aspect-[4/3] w-full rounded-lg object-cover object-[50%_68%]"
+                className="aspect-[4/3] w-full object-cover object-[50%_68%] md:rounded-lg"
                 loading="lazy"
               />
               <img
                 src={detail}
                 alt="Risotto della Trattoria Piemontese"
-                className="absolute -bottom-4 -right-3 aspect-[4/3] w-20 rounded-sm object-cover object-center shadow-2xl sm:-bottom-6 sm:-right-6 sm:w-32 md:w-48 lg:-bottom-10 lg:-right-10 lg:w-60"
+                className="absolute -bottom-4 -right-3 aspect-[4/3] w-20 object-cover object-center shadow-2xl sm:-bottom-6 sm:-right-6 sm:w-32 md:w-48 md:rounded-sm lg:-bottom-10 lg:-right-10 lg:w-60"
                 loading="lazy"
               />
             </figure>

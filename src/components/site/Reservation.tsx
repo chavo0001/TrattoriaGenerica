@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 import { Phone, Calendar, Users, Clock, CheckCircle2 } from "lucide-react";
 import bg from "@/assets/demo-tortelli.jpg";
 
@@ -11,7 +10,7 @@ export function Reservation() {
   const labelClass =
     "text-[8px] font-medium uppercase tracking-[0.1em] text-sand/85 md:text-xs md:tracking-[0.18em]";
   const fieldClass =
-    "mt-1 h-9 rounded-md border border-cream/15 bg-cream/[0.06] px-2 text-xs text-cream placeholder:text-cream/35 focus-visible:border-sand focus-visible:ring-1 focus-visible:ring-sand/30 md:mt-2 md:h-12 md:px-4 md:text-sm";
+    "mt-1 block h-9 w-full min-w-0 max-w-full rounded-md border border-cream/15 bg-cream/[0.06] px-2 text-xs text-cream placeholder:text-cream/35 focus-visible:border-sand focus-visible:ring-1 focus-visible:ring-sand/30 md:mt-2 md:h-12 md:px-4 md:text-sm";
 
   return (
     <section id="prenota" className="relative overflow-hidden bg-espresso py-10 md:py-24 lg:py-36">
@@ -60,7 +59,7 @@ export function Reservation() {
                   e.preventDefault();
                   setSubmitted(true);
                 }}
-                className="grid grid-cols-2 gap-2 md:gap-5"
+                className="grid grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-2 md:gap-5"
               >
                 <div className="mb-2 hidden border-b border-cream/10 pb-5 md:col-span-2 md:block">
                   <span className="text-[10px] uppercase tracking-[0.3em] text-sand/75">
@@ -69,14 +68,14 @@ export function Reservation() {
                   <h3 className="mt-3 font-display text-3xl text-cream">Dettagli prenotazione</h3>
                 </div>
 
-                <div className="col-span-2">
+                <div className="col-span-2 min-w-0">
                   <Label htmlFor="nome" className={labelClass}>
                     Nome e cognome
                   </Label>
                   <Input id="nome" required placeholder="Mario Rossi" className={fieldClass} />
                 </div>
 
-                <div>
+                <div className="min-w-0">
                   <Label htmlFor="tel" className={labelClass}>
                     Telefono
                   </Label>
@@ -89,7 +88,7 @@ export function Reservation() {
                   />
                 </div>
 
-                <div>
+                <div className="min-w-0">
                   <Label htmlFor="email" className={labelClass}>
                     Email{" "}
                     <span className="text-cream/40 normal-case tracking-normal">(opzionale)</span>
@@ -102,21 +101,33 @@ export function Reservation() {
                   />
                 </div>
 
-                <div>
+                <div className="min-w-0">
                   <Label htmlFor="data" className={`${labelClass} flex items-center gap-1.5`}>
                     <Calendar className="h-3.5 w-3.5" /> Data
                   </Label>
-                  <Input id="data" type="date" required className={fieldClass} />
+                  <Input
+                    id="data"
+                    type="date"
+                    required
+                    className={`${fieldClass} overflow-hidden`}
+                    style={{ minWidth: 0 }}
+                  />
                 </div>
 
-                <div>
+                <div className="min-w-0">
                   <Label htmlFor="ora" className={`${labelClass} flex items-center gap-1.5`}>
                     <Clock className="h-3.5 w-3.5" /> Orario
                   </Label>
-                  <Input id="ora" type="time" required className={fieldClass} />
+                  <Input
+                    id="ora"
+                    type="time"
+                    required
+                    className={`${fieldClass} overflow-hidden`}
+                    style={{ minWidth: 0 }}
+                  />
                 </div>
 
-                <div>
+                <div className="flex min-w-0 flex-col">
                   <Label htmlFor="persone" className={`${labelClass} flex items-center gap-1.5`}>
                     <Users className="h-3.5 w-3.5" /> Numero di persone
                   </Label>
@@ -131,15 +142,15 @@ export function Reservation() {
                   />
                 </div>
 
-                <div>
+                <div className="flex min-w-0 flex-col">
                   <Label htmlFor="note" className={labelClass}>
-                    Note o richieste particolari
+                    <span className="md:hidden">Note</span>
+                    <span className="hidden md:inline">Note o richieste particolari</span>
                   </Label>
-                  <Textarea
+                  <Input
                     id="note"
-                    rows={1}
                     placeholder="Allergie, intolleranze, occasioni speciali..."
-                    className="mt-1 min-h-9 resize-none rounded-md border border-cream/15 bg-cream/[0.06] px-2 py-2 text-xs text-cream placeholder:text-cream/35 focus-visible:border-sand focus-visible:ring-1 focus-visible:ring-sand/30 md:mt-2 md:min-h-24 md:px-4 md:py-3 md:text-sm"
+                    className={fieldClass}
                   />
                 </div>
 

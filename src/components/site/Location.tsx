@@ -47,7 +47,7 @@ export function Location() {
               <span className="text-[10px] tracking-[0.3em] uppercase text-cream/50 flex items-center gap-2">
                 <MapPin className="h-3.5 w-3.5" /> Indirizzo
               </span>
-              <p className="mt-2 font-display text-sm italic font-light leading-tight text-cream md:mt-3 md:text-2xl">
+              <p className="mt-2 font-body text-xs font-normal leading-snug text-cream md:mt-3 md:font-display md:text-2xl md:italic md:font-light">
                 Via Esempio 24
                 <br />
                 10100 Torino TO
@@ -56,10 +56,14 @@ export function Location() {
                 asChild
                 variant="editorial"
                 size="sm"
-                className="mt-2 h-8 w-full px-2 text-[8px] md:mt-5 md:h-10 md:px-4 md:text-sm"
+                className="mt-2 h-auto min-h-9 w-full gap-1 whitespace-normal px-1.5 py-2 text-center text-[7px] leading-tight md:mt-5 md:h-10 md:px-4 md:text-sm"
               >
                 <a href={MAPS_URL} target="_blank" rel="noopener noreferrer">
-                  Apri su Google Maps <ExternalLink className="h-3.5 w-3.5" />
+                  <span>
+                    Apri su
+                    <br className="sm:hidden" /> Google Maps
+                  </span>
+                  <ExternalLink className="h-3 w-3 shrink-0 md:h-3.5 md:w-3.5" />
                 </a>
               </Button>
             </div>
