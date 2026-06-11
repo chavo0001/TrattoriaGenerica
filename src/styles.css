@@ -471,7 +471,49 @@
     }
 
     .menu-brush {
-      display: none;
+      display: block;
+      z-index: 3;
+      inset: auto;
+      top: 43%;
+      right: 0;
+      width: 62%;
+      height: 34%;
+      transform: rotate(-5deg);
+      background:
+        linear-gradient(
+          101deg,
+          transparent 0 4%,
+          oklch(0.34 0.035 55 / 0.3) 12%,
+          oklch(0.48 0.045 62 / 0.48) 38%,
+          oklch(0.4 0.035 50 / 0.42) 70%,
+          transparent 96%
+        ),
+        repeating-linear-gradient(
+          4deg,
+          transparent 0 6px,
+          oklch(0.56 0.04 65 / 0.14) 7px 10px,
+          transparent 11px 17px
+        );
+      filter: blur(0.6px);
+      clip-path: polygon(
+        1% 19%,
+        15% 9%,
+        34% 13%,
+        52% 3%,
+        74% 10%,
+        98% 2%,
+        94% 28%,
+        100% 48%,
+        95% 70%,
+        99% 92%,
+        76% 86%,
+        55% 97%,
+        32% 89%,
+        8% 96%,
+        12% 68%,
+        2% 47%
+      );
+      opacity: 0.9;
     }
 
     .menu-hero-photo {
@@ -493,27 +535,27 @@
         4% 76%,
         0 52%
       );
-      -webkit-mask-image: linear-gradient(
-        to bottom,
-        transparent 0,
-        rgb(0 0 0 / 0.08) 7%,
-        rgb(0 0 0 / 0.4) 18%,
-        #000 31%,
-        #000 100%
+      -webkit-mask-image: radial-gradient(
+        ellipse 88% 82% at 42% 61%,
+        #000 0 62%,
+        rgb(0 0 0 / 0.9) 70%,
+        rgb(0 0 0 / 0.5) 81%,
+        rgb(0 0 0 / 0.14) 91%,
+        transparent 100%
       );
-      mask-image: linear-gradient(
-        to bottom,
-        transparent 0,
-        rgb(0 0 0 / 0.08) 7%,
-        rgb(0 0 0 / 0.4) 18%,
-        #000 31%,
-        #000 100%
+      mask-image: radial-gradient(
+        ellipse 88% 82% at 42% 61%,
+        #000 0 62%,
+        rgb(0 0 0 / 0.9) 70%,
+        rgb(0 0 0 / 0.5) 81%,
+        rgb(0 0 0 / 0.14) 91%,
+        transparent 100%
       );
     }
 
     .menu-detail-photo {
-      top: 49%;
-      right: 8%;
+      top: 48%;
+      right: 7%;
       bottom: auto;
       width: 48%;
       border: 0;
