@@ -467,12 +467,17 @@
     }
 
     .menu-photo-composition {
-      inset: -1rem -4.5rem 0 43%;
+      inset: -1rem -1rem 0 38%;
+    }
+
+    .menu-brush {
+      display: none;
     }
 
     .menu-hero-photo {
       top: 0;
-      width: 95%;
+      right: 1%;
+      width: 96%;
       height: 60%;
       clip-path: polygon(
         0 0,
@@ -488,29 +493,52 @@
         4% 76%,
         0 52%
       );
-      -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 9%, #000 100%);
-      mask-image: linear-gradient(to bottom, transparent 0, #000 9%, #000 100%);
+      -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0,
+        rgb(0 0 0 / 0.08) 7%,
+        rgb(0 0 0 / 0.4) 18%,
+        #000 31%,
+        #000 100%
+      );
+      mask-image: linear-gradient(
+        to bottom,
+        transparent 0,
+        rgb(0 0 0 / 0.08) 7%,
+        rgb(0 0 0 / 0.4) 18%,
+        #000 31%,
+        #000 100%
+      );
     }
 
     .menu-detail-photo {
-      right: 7%;
-      bottom: 16%;
-      width: 43%;
-      border-width: 0.28rem;
+      top: 49%;
+      right: 8%;
+      bottom: auto;
+      width: 48%;
+      border: 0;
+      background: transparent;
+      box-shadow: 0 1rem 2.25rem rgb(0 0 0 / 0.42);
     }
 
     .menu-note {
-      right: 45%;
-      bottom: 13%;
-      width: 10rem;
-      font-size: 0.88rem;
+      right: auto;
+      bottom: 11%;
+      left: 2%;
+      width: 9.5rem;
+      font-size: 0.82rem;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      line-height: 1.42;
+      text-align: left;
     }
 
     .menu-arrow {
-      right: 43%;
+      right: auto;
       bottom: 22%;
-      width: 4rem;
-      height: 3.25rem;
+      left: 8%;
+      width: 3.8rem;
+      height: 3rem;
     }
 
     .taste-editorial {
