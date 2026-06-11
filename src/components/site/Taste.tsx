@@ -30,6 +30,7 @@ export function Taste() {
             <figure className="taste-photo taste-photo-main">
               <img src={fiorentina} alt="Pasta fresca al ragù" loading="lazy" />
             </figure>
+            <span className="taste-tape" aria-hidden="true" />
 
             <figure className="taste-photo taste-photo-left">
               <img src={tartare} alt="Tartare con pistacchi" loading="lazy" />

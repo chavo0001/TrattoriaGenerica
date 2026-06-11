@@ -37,9 +37,10 @@ export function MenuSection() {
             <figure className="menu-detail-photo">
               <img src={detail} alt="Risotto della Trattoria Piemontese" loading="lazy" />
             </figure>
-            <span className="menu-arrow" aria-hidden="true">
-              ↗
-            </span>
+            <svg className="menu-arrow" viewBox="0 0 90 70" fill="none" aria-hidden="true">
+              <path d="M7 62C20 38 42 20 72 13" />
+              <path d="M55 8C63 9 71 10 79 14C74 21 69 27 63 32" />
+            </svg>
             <p className="menu-note">
               Ingredienti scelti,
               <br />

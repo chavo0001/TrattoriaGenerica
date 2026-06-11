@@ -207,12 +207,12 @@
     transform: rotate(1.1deg);
     box-shadow: 0 2rem 5rem rgb(0 0 0 / 0.42);
     clip-path: polygon(
-      3% 5%,
-      23% 1%,
-      44% 3%,
+      0 0,
+      23% 0,
+      44% 0,
       63% 0,
-      82% 4%,
-      98% 2%,
+      82% 0,
+      100% 0,
       100% 24%,
       97% 49%,
       100% 73%,
@@ -279,10 +279,17 @@
     right: 34%;
     bottom: 14%;
     color: var(--sand);
-    font-family: var(--font-display);
-    font-size: 2.5rem;
-    transform: rotate(-32deg);
+    width: 5.5rem;
+    height: 4.25rem;
+    transform: rotate(-7deg);
     opacity: 0.8;
+  }
+
+  .menu-arrow path {
+    stroke: var(--sand);
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
 
   .taste-editorial {
@@ -342,6 +349,37 @@
       0 54%,
       2% 31%
     );
+  }
+
+  .taste-photo::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    pointer-events: none;
+    box-shadow:
+      inset 0 0 0 1px rgb(255 248 230 / 0.25),
+      inset 0 0 1.5rem rgb(78 48 25 / 0.12);
+  }
+
+  .taste-tape {
+    position: absolute;
+    z-index: 7;
+    top: -1.2%;
+    right: 25%;
+    width: 8rem;
+    height: 2.5rem;
+    transform: rotate(5deg);
+    background:
+      linear-gradient(90deg, transparent, rgb(255 244 203 / 0.1) 8% 92%, transparent),
+      repeating-linear-gradient(
+        96deg,
+        rgb(225 207 164 / 0.58) 0 4px,
+        rgb(242 226 187 / 0.68) 4px 9px
+      );
+    box-shadow: 0 0.25rem 0.7rem rgb(0 0 0 / 0.16);
+    clip-path: polygon(2% 8%, 98% 0, 96% 91%, 3% 100%);
+    opacity: 0.78;
+    mix-blend-mode: screen;
   }
 
   .taste-photo-main {
@@ -436,6 +474,22 @@
       top: 0;
       width: 95%;
       height: 60%;
+      clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 24%,
+        97% 49%,
+        100% 73%,
+        96% 98%,
+        74% 96%,
+        51% 100%,
+        28% 97%,
+        2% 99%,
+        4% 76%,
+        0 52%
+      );
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 9%, #000 100%);
+      mask-image: linear-gradient(to bottom, transparent 0, #000 9%, #000 100%);
     }
 
     .menu-detail-photo {
@@ -453,55 +507,71 @@
     }
 
     .menu-arrow {
-      right: 46%;
-      bottom: 24%;
-      font-size: 1.8rem;
+      right: 43%;
+      bottom: 22%;
+      width: 4rem;
+      height: 3.25rem;
     }
 
     .taste-editorial {
-      min-height: 48rem;
+      min-height: 69rem;
     }
 
     .taste-copy {
-      width: 58%;
+      width: 100%;
     }
 
     .taste-copy p {
-      max-width: 15rem;
+      max-width: 22rem;
     }
 
     .taste-collage {
-      inset: 13.5rem -2.5rem 0 0;
+      inset: 24rem -2.25rem 0 0;
     }
 
     .taste-photo {
-      padding: 0.3rem 0.3rem 0.65rem;
+      padding: 0.48rem 0.48rem 0.9rem;
+      background:
+        linear-gradient(115deg, oklch(0.94 0.02 81 / 0.98), oklch(0.84 0.03 72 / 0.98)),
+        radial-gradient(rgb(70 45 24 / 0.2) 0.7px, transparent 0.9px);
+      background-size:
+        auto,
+        3px 3px;
     }
 
     .taste-photo-main {
-      right: 0;
-      width: 52%;
-      height: 31%;
+      top: 0;
+      right: 2%;
+      width: 55%;
+      height: 28%;
     }
 
     .taste-photo-left {
       top: 25%;
-      left: 1%;
-      width: 45%;
-      height: 37%;
+      left: 3%;
+      width: 43%;
+      height: 32%;
     }
 
     .taste-photo-right {
-      top: 34%;
-      right: -2%;
-      width: 48%;
-      height: 35%;
+      top: 31%;
+      right: 0;
+      width: 47%;
+      height: 31%;
     }
 
     .taste-photo-bottom {
-      left: 27%;
+      bottom: 1%;
+      left: 30%;
       width: 48%;
-      height: 33%;
+      height: 31%;
+    }
+
+    .taste-tape {
+      top: -1%;
+      right: 18%;
+      width: 5.6rem;
+      height: 1.8rem;
     }
 
     .taste-note {
