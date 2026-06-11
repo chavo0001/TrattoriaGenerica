@@ -514,7 +514,7 @@
     }
 
     .taste-editorial {
-      min-height: 69rem;
+      min-height: 0;
     }
 
     .taste-copy {
@@ -526,7 +526,12 @@
     }
 
     .taste-collage {
-      inset: 24rem -2.25rem 0 0;
+      position: relative;
+      inset: auto;
+      width: calc(100% + 2.25rem);
+      height: 43rem;
+      margin-top: 0.75rem;
+      margin-right: -2.25rem;
     }
 
     .taste-photo {
@@ -542,29 +547,29 @@
     .taste-photo-main {
       top: 0;
       right: 2%;
-      width: 55%;
-      height: 28%;
+      width: 57%;
+      height: 30%;
     }
 
     .taste-photo-left {
-      top: 25%;
-      left: 3%;
-      width: 43%;
-      height: 32%;
+      top: 22%;
+      left: 2%;
+      width: 46%;
+      height: 34%;
     }
 
     .taste-photo-right {
-      top: 31%;
-      right: 0;
-      width: 47%;
-      height: 31%;
+      top: 27%;
+      right: -1%;
+      width: 50%;
+      height: 34%;
     }
 
     .taste-photo-bottom {
-      bottom: 1%;
-      left: 30%;
-      width: 48%;
-      height: 31%;
+      bottom: 2%;
+      left: 27%;
+      width: 52%;
+      height: 34%;
     }
 
     .taste-tape {
