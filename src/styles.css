@@ -247,11 +247,38 @@
     width: 31%;
     aspect-ratio: 1;
     overflow: hidden;
-    border: 0.45rem solid oklch(0.92 0.025 78);
     border-radius: 999px;
     transform: rotate(4deg);
-    background: var(--cream);
-    box-shadow: 0 1.25rem 3rem rgb(0 0 0 / 0.5);
+    background: transparent;
+    box-shadow: 0 1.25rem 3rem rgb(0 0 0 / 0.55);
+  }
+
+  .menu-detail-brush {
+    position: absolute;
+    z-index: 3;
+    right: 10%;
+    bottom: 6%;
+    width: 38%;
+    aspect-ratio: 1;
+    background:
+      radial-gradient(circle at 50% 50%, transparent 42%, oklch(0.24 0.02 45 / 0.7) 44%, transparent 52%),
+      radial-gradient(circle at 42% 45%, oklch(0.28 0.025 48 / 0.68) 0%, transparent 62%);
+    filter: blur(1px);
+    transform: rotate(8deg);
+    clip-path: polygon(
+      51% 0%,
+      76% 9%,
+      91% 30%,
+      94% 55%,
+      87% 79%,
+      69% 97%,
+      50% 100%,
+      31% 94%,
+      12% 76%,
+      7% 53%,
+      12% 29%,
+      27% 13%
+    );
   }
 
   .menu-detail-photo img {
