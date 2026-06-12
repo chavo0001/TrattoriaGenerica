@@ -1,7 +1,7 @@
-import antipasti from "@/assets/demo-tortelli.jpg";
-import tartare from "@/assets/demo-tartare.jpg";
-import carneVerdure from "@/assets/demo-carne.jpg";
-import fiorentina from "@/assets/demo-pasta-ragu.jpg";
+import antipasti from "@/assets/postcard-tortelli.png";
+import tartare from "@/assets/postcard-tartare.png";
+import carneVerdure from "@/assets/postcard-carne.png";
+import fiorentina from "@/assets/postcard-pasta-ragu.png";
 
 export function Taste() {
   return (
@@ -25,13 +25,9 @@ export function Taste() {
           </div>
 
           <div className="taste-collage" aria-label="Selezione di piatti della cucina">
-            <span className="taste-brush" aria-hidden="true" />
-
             <figure className="taste-photo taste-photo-main">
               <img src={fiorentina} alt="Pasta fresca al ragù" loading="lazy" />
             </figure>
-            <span className="taste-tape" aria-hidden="true" />
-
             <figure className="taste-photo taste-photo-left">
               <img src={tartare} alt="Tartare con pistacchi" loading="lazy" />
             </figure>
