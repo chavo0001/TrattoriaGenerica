@@ -170,32 +170,6 @@
     inset: 0 -3rem 0 39%;
   }
 
-  .menu-brush {
-    position: absolute;
-    inset: 3% 0 12% 4%;
-    transform: rotate(-2deg);
-    background:
-      radial-gradient(ellipse at 48% 45%, oklch(0.28 0.025 48 / 0.72), transparent 66%),
-      linear-gradient(105deg, transparent 4%, oklch(0.24 0.02 45 / 0.72) 23%, transparent 91%);
-    filter: blur(2px);
-    clip-path: polygon(
-      4% 9%,
-      91% 1%,
-      98% 15%,
-      92% 30%,
-      100% 48%,
-      91% 66%,
-      97% 84%,
-      78% 96%,
-      55% 91%,
-      35% 100%,
-      14% 92%,
-      1% 74%,
-      8% 53%,
-      0 34%
-    );
-  }
-
   .menu-hero-photo {
     position: absolute;
     z-index: 2;
@@ -250,35 +224,7 @@
     border-radius: 999px;
     transform: rotate(4deg);
     background: transparent;
-    box-shadow: 0 1.25rem 3rem rgb(0 0 0 / 0.55);
-  }
-
-  .menu-detail-brush {
-    position: absolute;
-    z-index: 3;
-    right: 10%;
-    bottom: 6%;
-    width: 38%;
-    aspect-ratio: 1;
-    background:
-      radial-gradient(circle at 50% 50%, transparent 42%, oklch(0.24 0.02 45 / 0.7) 44%, transparent 52%),
-      radial-gradient(circle at 42% 45%, oklch(0.28 0.025 48 / 0.68) 0%, transparent 62%);
-    filter: blur(1px);
-    transform: rotate(8deg);
-    clip-path: polygon(
-      51% 0%,
-      76% 9%,
-      91% 30%,
-      94% 55%,
-      87% 79%,
-      69% 97%,
-      50% 100%,
-      31% 94%,
-      12% 76%,
-      7% 53%,
-      12% 29%,
-      27% 13%
-    );
+    box-shadow: none;
   }
 
   .menu-detail-photo img {
@@ -523,59 +469,6 @@
       inset: -1.5rem -1rem 0 37%;
     }
 
-    .menu-brush {
-      display: block;
-      z-index: 3;
-      inset: auto;
-      top: 55%;
-      right: -13%;
-      width: 78%;
-      height: 22%;
-      transform: rotate(8deg);
-      background:
-        repeating-linear-gradient(
-          7deg,
-          transparent 0 5px,
-          oklch(0.77 0.055 76 / 0.16) 6px 9px,
-          transparent 10px 15px
-        ),
-        linear-gradient(
-          100deg,
-          transparent 0 2%,
-          oklch(0.62 0.055 68 / 0.25) 5%,
-          oklch(0.72 0.065 76 / 0.66) 19%,
-          oklch(0.64 0.055 68 / 0.72) 55%,
-          oklch(0.52 0.045 58 / 0.5) 83%,
-          transparent 98%
-        );
-      filter: blur(0.2px);
-      clip-path: polygon(
-        0 53%,
-        5% 38%,
-        14% 29%,
-        25% 19%,
-        39% 13%,
-        53% 8%,
-        68% 13%,
-        82% 20%,
-        96% 12%,
-        91% 30%,
-        100% 38%,
-        91% 47%,
-        98% 57%,
-        84% 61%,
-        91% 73%,
-        75% 69%,
-        64% 82%,
-        48% 72%,
-        32% 88%,
-        20% 72%,
-        8% 79%,
-        13% 63%
-      );
-      opacity: 0.92;
-    }
-
     .menu-hero-photo {
       top: -1%;
       right: -3%;
@@ -644,7 +537,7 @@
       border: 0;
       background: transparent;
       transform: rotate(1deg);
-      box-shadow: 0 1rem 2.5rem rgb(0 0 0 / 0.46);
+      box-shadow: none;
     }
 
     .menu-note {

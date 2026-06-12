@@ -30,11 +30,9 @@ export function MenuSection() {
           </div>
 
           <div className="menu-photo-composition">
-            <span className="menu-brush" aria-hidden="true" />
             <figure className="menu-hero-photo">
               <img src={team} alt="Piatto con gnocchi colorati" loading="lazy" />
             </figure>
-            <span className="menu-detail-brush" aria-hidden="true" />
             <figure className="menu-detail-photo">
               <img src={detail} alt="Risotto della Trattoria Piemontese" loading="lazy" />
             </figure>
