@@ -564,6 +564,24 @@
       );
     }
 
+    .menu-hero-photo::after {
+      position: absolute;
+      z-index: 2;
+      inset: -1px 0 auto;
+      height: 42%;
+      content: "";
+      pointer-events: none;
+      background: linear-gradient(
+        to bottom,
+        var(--ink) 0%,
+        oklch(0.16 0.012 50 / 0.94) 12%,
+        oklch(0.16 0.012 50 / 0.76) 30%,
+        oklch(0.16 0.012 50 / 0.4) 57%,
+        oklch(0.16 0.012 50 / 0.12) 82%,
+        transparent 100%
+      );
+    }
+
     .menu-detail-photo {
       top: 50%;
       right: 3%;
