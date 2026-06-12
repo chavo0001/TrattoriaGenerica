@@ -445,6 +445,20 @@
   }
 
   @media (max-width: 767px) {
+    #data,
+    #ora {
+      display: block;
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+    }
+
+    #data::-webkit-date-and-time-value,
+    #ora::-webkit-date-and-time-value {
+      min-width: 0;
+      text-align: left;
+    }
+
     .menu-editorial {
       min-height: 37rem;
     }
@@ -467,106 +481,92 @@
     }
 
     .menu-photo-composition {
-      inset: -1rem -1rem 0 38%;
+      inset: -1.5rem -1rem 0 37%;
     }
 
     .menu-brush {
       display: block;
       z-index: 3;
       inset: auto;
-      top: 43%;
-      right: 0;
-      width: 62%;
-      height: 34%;
-      transform: rotate(-5deg);
+      top: 40%;
+      right: -20%;
+      width: 92%;
+      aspect-ratio: 1.22;
+      height: auto;
+      transform: rotate(10deg);
       background:
-        linear-gradient(
-          101deg,
-          transparent 0 4%,
-          oklch(0.34 0.035 55 / 0.3) 12%,
-          oklch(0.48 0.045 62 / 0.48) 38%,
-          oklch(0.4 0.035 50 / 0.42) 70%,
-          transparent 96%
+        repeating-conic-gradient(
+          from 205deg at 50% 50%,
+          oklch(0.7 0.055 73 / 0.46) 0deg 3deg,
+          oklch(0.54 0.045 61 / 0.32) 4deg 7deg,
+          transparent 8deg 11deg
         ),
-        repeating-linear-gradient(
-          4deg,
-          transparent 0 6px,
-          oklch(0.56 0.04 65 / 0.14) 7px 10px,
-          transparent 11px 17px
+        conic-gradient(
+          from 203deg,
+          transparent 0deg 34deg,
+          oklch(0.66 0.055 70 / 0.56) 45deg 188deg,
+          oklch(0.47 0.04 58 / 0.38) 210deg 285deg,
+          transparent 312deg
         );
-      filter: blur(0.6px);
-      clip-path: polygon(
-        1% 19%,
-        15% 9%,
-        34% 13%,
-        52% 3%,
-        74% 10%,
-        98% 2%,
-        94% 28%,
-        100% 48%,
-        95% 70%,
-        99% 92%,
-        76% 86%,
-        55% 97%,
-        32% 89%,
-        8% 96%,
-        12% 68%,
-        2% 47%
+      filter: blur(0.35px);
+      -webkit-mask-image: radial-gradient(
+        ellipse 50% 47% at 51% 49%,
+        transparent 0 54%,
+        #000 58% 69%,
+        rgb(0 0 0 / 0.7) 73%,
+        transparent 79%
       );
-      opacity: 0.9;
+      mask-image: radial-gradient(
+        ellipse 50% 47% at 51% 49%,
+        transparent 0 54%,
+        #000 58% 69%,
+        rgb(0 0 0 / 0.7) 73%,
+        transparent 79%
+      );
+      opacity: 0.88;
     }
 
     .menu-hero-photo {
-      top: 0;
-      right: 1%;
-      width: 96%;
-      height: 60%;
-      clip-path: polygon(
-        0 0,
-        100% 0,
-        100% 24%,
-        97% 49%,
-        100% 73%,
-        96% 98%,
-        74% 96%,
-        51% 100%,
-        28% 97%,
-        2% 99%,
-        4% 76%,
-        0 52%
-      );
+      top: -1%;
+      right: -3%;
+      width: 104%;
+      height: 66%;
+      transform: none;
+      box-shadow: none;
+      clip-path: none;
       -webkit-mask-image: radial-gradient(
-        ellipse 88% 82% at 42% 61%,
-        #000 0 62%,
-        rgb(0 0 0 / 0.9) 70%,
-        rgb(0 0 0 / 0.5) 81%,
-        rgb(0 0 0 / 0.14) 91%,
+        ellipse 82% 86% at 53% 50%,
+        #000 0 56%,
+        rgb(0 0 0 / 0.96) 63%,
+        rgb(0 0 0 / 0.7) 72%,
+        rgb(0 0 0 / 0.28) 84%,
         transparent 100%
       );
       mask-image: radial-gradient(
-        ellipse 88% 82% at 42% 61%,
-        #000 0 62%,
-        rgb(0 0 0 / 0.9) 70%,
-        rgb(0 0 0 / 0.5) 81%,
-        rgb(0 0 0 / 0.14) 91%,
+        ellipse 82% 86% at 53% 50%,
+        #000 0 56%,
+        rgb(0 0 0 / 0.96) 63%,
+        rgb(0 0 0 / 0.7) 72%,
+        rgb(0 0 0 / 0.28) 84%,
         transparent 100%
       );
     }
 
     .menu-detail-photo {
-      top: 48%;
-      right: 7%;
+      top: 50%;
+      right: 3%;
       bottom: auto;
-      width: 48%;
+      width: 46%;
       border: 0;
       background: transparent;
-      box-shadow: 0 1rem 2.25rem rgb(0 0 0 / 0.42);
+      transform: rotate(1deg);
+      box-shadow: 0 1rem 2.5rem rgb(0 0 0 / 0.46);
     }
 
     .menu-note {
       right: auto;
-      bottom: 11%;
-      left: 2%;
+      bottom: 8%;
+      left: 1%;
       width: 9.5rem;
       font-size: 0.82rem;
       font-weight: 400;
@@ -577,8 +577,8 @@
 
     .menu-arrow {
       right: auto;
-      bottom: 22%;
-      left: 8%;
+      bottom: 19%;
+      left: 10%;
       width: 3.8rem;
       height: 3rem;
     }

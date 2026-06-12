@@ -101,7 +101,7 @@ export function Reservation() {
                   />
                 </div>
 
-                <div className="min-w-0">
+                <div className="col-span-2 min-w-0 md:col-span-1">
                   <Label htmlFor="data" className={`${labelClass} flex items-center gap-1.5`}>
                     <Calendar className="h-3.5 w-3.5" /> Data
                   </Label>
@@ -114,7 +114,7 @@ export function Reservation() {
                   />
                 </div>
 
-                <div className="min-w-0">
+                <div className="col-span-2 min-w-0 md:col-span-1">
                   <Label htmlFor="ora" className={`${labelClass} flex items-center gap-1.5`}>
                     <Clock className="h-3.5 w-3.5" /> Orario
                   </Label>
