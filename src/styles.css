@@ -445,16 +445,28 @@
   }
 
   @media (max-width: 767px) {
-    #data,
-    #ora {
-      display: block;
-      width: 100%;
-      min-width: 100%;
-      max-width: 100%;
+    .reservation-datetime {
+      box-sizing: border-box;
+      inline-size: 100%;
+      min-inline-size: 0;
+      max-inline-size: 100%;
+      justify-self: stretch;
     }
 
-    #data::-webkit-date-and-time-value,
-    #ora::-webkit-date-and-time-value {
+    .reservation-datetime-input {
+      display: block;
+      box-sizing: border-box;
+      inline-size: 100% !important;
+      min-inline-size: 0 !important;
+      max-inline-size: 100% !important;
+      margin-inline: 0;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .reservation-datetime-input::-webkit-date-and-time-value {
+      display: block;
+      inline-size: 100%;
       min-width: 0;
       text-align: left;
     }
