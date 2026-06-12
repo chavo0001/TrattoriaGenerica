@@ -567,19 +567,35 @@
     .menu-hero-photo::after {
       position: absolute;
       z-index: 2;
-      inset: -1px 0 auto;
-      height: 42%;
+      inset: -1px;
       content: "";
       pointer-events: none;
-      background: linear-gradient(
-        to bottom,
-        var(--ink) 0%,
-        oklch(0.16 0.012 50 / 0.94) 12%,
-        oklch(0.16 0.012 50 / 0.76) 30%,
-        oklch(0.16 0.012 50 / 0.4) 57%,
-        oklch(0.16 0.012 50 / 0.12) 82%,
-        transparent 100%
-      );
+      background:
+        linear-gradient(
+          to bottom,
+          var(--ink) 0%,
+          oklch(0.16 0.012 50 / 0.94) 7%,
+          oklch(0.16 0.012 50 / 0.76) 16%,
+          oklch(0.16 0.012 50 / 0.4) 28%,
+          oklch(0.16 0.012 50 / 0.12) 39%,
+          transparent 48%
+        ),
+        linear-gradient(
+          to right,
+          var(--ink) 0%,
+          oklch(0.16 0.012 50 / 0.9) 7%,
+          oklch(0.16 0.012 50 / 0.62) 15%,
+          oklch(0.16 0.012 50 / 0.26) 25%,
+          transparent 36%
+        ),
+        linear-gradient(
+          to top,
+          var(--ink) 0%,
+          oklch(0.16 0.012 50 / 0.86) 6%,
+          oklch(0.16 0.012 50 / 0.58) 14%,
+          oklch(0.16 0.012 50 / 0.2) 25%,
+          transparent 37%
+        );
     }
 
     .menu-detail-photo {
