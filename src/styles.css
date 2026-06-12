@@ -227,6 +227,19 @@
     box-shadow: none;
   }
 
+  .menu-detail-brushstroke {
+    position: absolute;
+    z-index: 3;
+    right: -1%;
+    bottom: -2%;
+    width: 47%;
+    height: auto;
+    transform: rotate(-5deg);
+    mix-blend-mode: screen;
+    opacity: 0.76;
+    pointer-events: none;
+  }
+
   .menu-detail-photo img {
     object-position: center;
   }
@@ -538,6 +551,15 @@
       background: transparent;
       transform: rotate(1deg);
       box-shadow: none;
+    }
+
+    .menu-detail-brushstroke {
+      top: 56%;
+      right: -13%;
+      bottom: auto;
+      width: 72%;
+      transform: rotate(-8deg);
+      opacity: 0.82;
     }
 
     .menu-note {

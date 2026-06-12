@@ -1,6 +1,7 @@
 import { FileText } from "lucide-react";
 import team from "@/assets/demo-gnocchi-colorati.jpg";
 import detail from "@/assets/demo-risotto.jpg";
+import brushstroke from "@/assets/demo-brushstroke-cream.png";
 
 const pdfs = [
   { label: "Menu Italiano", href: "/menu/menu-italiano.pdf", lang: "IT" },
@@ -33,6 +34,13 @@ export function MenuSection() {
             <figure className="menu-hero-photo">
               <img src={team} alt="Piatto con gnocchi colorati" loading="lazy" />
             </figure>
+            <img
+              src={brushstroke}
+              alt=""
+              aria-hidden="true"
+              className="menu-detail-brushstroke"
+              loading="lazy"
+            />
             <figure className="menu-detail-photo">
               <img src={detail} alt="Risotto della Trattoria Piemontese" loading="lazy" />
             </figure>
